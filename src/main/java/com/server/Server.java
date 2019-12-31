@@ -15,7 +15,7 @@ public class Server {
     public Server(int port) {
         try {
             serverSocket = new ServerSocket(port);
-            System.out.println("Server connected on port: " + port);
+            System.out.println("Server is listening on port: " + port);
             Socket clientSocket = serverSocket.accept();
             System.out.println("Client accepted");
         } catch (IOException e) {
