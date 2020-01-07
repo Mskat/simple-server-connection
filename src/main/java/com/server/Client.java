@@ -9,10 +9,12 @@ import java.net.Socket;
 public class Client {
 
     public static void main(String[] args) {
-        Client myClient = new Client("127.0.0.1", 5000);
+        int portNumber = 5000;
+        String address = "127.0.0.1";
+        Client myClient = new Client(address, portNumber);
     }
 
-    public Client(String address, int port) {
+    private Client(String address, int port) {
         try {
             Socket socket = new Socket(address, port);
             System.out.println("Connected");
@@ -23,7 +25,7 @@ public class Client {
             String userInput;
             while((userInput = in.readLine()) != null) {
                 output.println(userInput);
-                System.out.println(input.readLine());
+                System.out.println("Server received message: " + input.readLine());
             }
         } catch (IOException e) {
             e.printStackTrace();
