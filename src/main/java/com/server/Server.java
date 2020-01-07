@@ -10,10 +10,11 @@ import java.net.Socket;
 public class Server {
 
     public static void main(String[] args) {
-        Server myServer = new Server(5000);
+        int portNumber = 5000;
+        Server myServer = new Server(portNumber);
     }
 
-    public Server(int port) {
+    private Server(int port) {
         try {
             ServerSocket serverSocket = new ServerSocket(port);
             System.out.println("Server is listening on port: " + port);
@@ -24,7 +25,7 @@ public class Server {
 
             String userInput;
             while((userInput = input.readLine()) != null) {
-                output.println("Server received message: " + userInput);
+                output.println(userInput);
             }
         } catch (IOException e) {
             e.printStackTrace();
