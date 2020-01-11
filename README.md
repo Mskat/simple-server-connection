@@ -8,6 +8,7 @@ Java 8+
 
 ## Setup
 Go to simple-server-connection-master\src\main\java directory.<br>
+
 Run the commands:
 
 <ul>
