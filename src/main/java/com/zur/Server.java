@@ -24,11 +24,16 @@ public class Server {
             BufferedReader input = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
             String userInput;
-            while((userInput = input.readLine()) != null) {
+            while(true) {
+                userInput = input.readLine();
+                if(userInput.equals("bye")) {
+                    break;
+                }
                 output.println(userInput);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("Client disconnected");
         }
     }
 
