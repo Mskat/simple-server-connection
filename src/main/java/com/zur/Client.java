@@ -23,7 +23,7 @@ public class Client {
             BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
             String userInput;
-            while((userInput = in.readLine()) != null) {
+            while(!(userInput = in.readLine()).equals("bye")) {
                 output.println(userInput);
                 System.out.println("Server received message: " + input.readLine());
             }
