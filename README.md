@@ -5,9 +5,10 @@ This project is a client-server connection using sockets. It was created to lear
 
 ## Technologies
 Java 8+
+The application has been created with usage of the SocketServer and Socket classes
 
 ## Setup
-Go to simple-server-connection-master\src\main\java directory.<br>
+Go to simple-server-connection-master/src/main/java directory.<br>
 
 Run the commands:
 
