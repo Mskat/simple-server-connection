@@ -1,10 +1,10 @@
-# simple-server-connection
+# Simple Server Connection
 
 ## General info
 This project is a client-server connection using sockets. It was created to learn how Java sockets work as an introduction to writing multi-user chat application.
 
 ## Technologies
-Java 8+
+Java 8+<br>
 The application has been created with usage of the SocketServer and Socket classes
 
 ## Setup
